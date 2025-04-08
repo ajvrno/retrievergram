@@ -3,19 +3,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign up for RetrieverGram!</title>
+    <title>RetrieverGram</title>
     <link rel="stylesheet" href="profile.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@300..700&display=swap');
+    </style>
 </head>
 
 <body>
     <!--Sign Up Form -->
 	<div class="register">
-		<h1>Sign Up</h1>
-		<form id="form1" action="create_profile.html" method="post">
-			<label for="email">School Email: <input type="email" name="registration" id="email" required></label><br>
-			<label for="phone">Phone Number: <input type="tel" name="registration" id="phone" required></label><br>
-			<label for="username">Username: <input type="text" name="registration" id="username" required></label><br>
-            <label for="pass">Password: <input type="password" name="registration" id="pass" required></label><br>
+	    <h1>Sign Up</h1>
+
+		<form id="form" action="/src/create_profile.html" method="get">
+			<label for="email">School Email</label><br>
+            <input type="email" name="email" required></label><br>
+			<label for="phone">Phone Number</label><br>
+            <input type="tel" name="phone" required></label><br>
+			<label for="username">Username</label><br>
+            <input type="text" name="username" required><br>
+            <label for="pass">Password</label><br>
+            <input type="password" name="pass" required><br>
 			
             <button type="submit">Sign Up</button>
         </form>

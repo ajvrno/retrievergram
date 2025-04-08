@@ -3,27 +3,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create RetrieverGram Profile</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="profile.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@300..700&display=swap');
+    </style>
 </head>
 
 <body>
     <!--Create Profile-->
-    <div class="create">
-        <form id="form2" action="confirmation.html" method="post">
-            <label for="fname">First Name: <input type="text" name="registration" id="fname" required></label><br>
-            <label for="lname">Last Name: <input type="text" name="registration" id="lname" required></label><br>
-            <label for="major">Major: <input type="text" name="registration" id="major" required></label><br>
-            <label for="grad">Graduation Date: <input type="month" name="registration" id="grad" required></label><br>
+    <div class="register">
+        <h1>Create RetrieverGram Profile</h1>
+
+        <form id="form" action="confirmation.html" method="get">
+            <label for="fname">First Name</label><br>
+            <input type="text" name="fname" required><br>
+            <label for="lname">Last Name</label><br>
+            <input type="text" name="lname" required><br>
+            <label for="major">Major</label><br>
+            <input type="text" name="major" required><br>
+            <label for="grad">Graduation Date</label><br>
+            <input type="month" name="grad" required><br>
 
             <!--Multiselect-->
-            <label for="pronouns">Pronouns: </label>
+            <label for="pronouns">Pronouns</label><br>
                 <select name="pronouns" id="pronouns" required>
                     <option value="sh">She/her</option>
                     <option value="hh">He/him</option>
                     <option value="tt">They/them</option>
-                </select>
-            <br>
+                </select><br>
 
             <button type="submit">Create Profile</button>
         </form>    
