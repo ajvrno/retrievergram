@@ -1,0 +1,33 @@
+<!--Ashley Rabino-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create RetrieverGram Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <!--Create Profile-->
+    <div class="create">
+        <form id="form2" action="confirmation.html" method="post">
+            <label for="fname">First Name: <input type="text" name="registration" id="fname" required></label><br>
+            <label for="lname">Last Name: <input type="text" name="registration" id="lname" required></label><br>
+            <label for="major">Major: <input type="text" name="registration" id="major" required></label><br>
+            <label for="grad">Graduation Date: <input type="month" name="registration" id="grad" required></label><br>
+
+            <!--Multiselect-->
+            <label for="pronouns">Pronouns: </label>
+                <select name="pronouns" id="pronouns" required>
+                    <option value="sh">She/her</option>
+                    <option value="hh">He/him</option>
+                    <option value="tt">They/them</option>
+                </select>
+            <br>
+
+            <button type="submit">Create Profile</button>
+        </form>    
+    </div>
+
+</body>
+</html>
