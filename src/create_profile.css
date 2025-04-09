@@ -38,6 +38,16 @@ input {
     border-radius: 5px;
 }
 
+a {
+    color: black;
+    transition-duration: 0.2s;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    color: #a67a05;
+  }
+
 .register {
     display: flex;
     flex-direction: column;
