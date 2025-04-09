@@ -1,0 +1,153 @@
+<!--Wayne Major-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Main Feed</title>
+	<link rel="stylesheet" href="MainStyles.css">
+	
+	<!-- Executable Scripts for Main Page -->
+	<script src="https://kit.fontawesome.com/c518db16a5.js" crossorigin="anonymous"></script>
+	<script>
+	
+		let navOpen = false;
+		function toggleNav(){
+			if (!navOpen){
+				openNav();
+				navOpen = true;
+			}else{
+				closeNav();
+				navOpen = false;
+				}
+		}
+		
+		
+		/*show navbar */
+		function openNav(){
+		
+			const panel = document.getElementById("mySidepanel");
+			const main = document.getElementById("main");
+			const button = document.getElementById("togglebtn");
+			main.style.marginLeft = "25%";
+			panel.style.width = "25%";
+			panel.style.display = "block";
+			button.style.left = '25%';
+		}
+		
+		/*hide navabar */
+		function closeNav(){
+			const panel = document.getElementById("mySidepanel");
+			const main = document.getElementById("main");
+			const button = document.getElementById("togglebtn");
+			main.style.marginLeft = "0%";
+			panel.style.width = "0%";
+			button.style.left = "0%";
+		}
+		
+	
+	</script>
+</head>
+<body>
+
+	<header>
+		<img class ="logo" src="umbclogo.jpg" alt="UMBC LOGO BLACK" >
+		<h1> RetrieverGram </h1>
+	</header>
+	
+	<button id="togglebtn" class="togglebtn" onclick="toggleNav()">&#9776; </button>
+	
+<!--	Collapsible Navbar		-->
+	<nav id="mySidepanel" class="sidepanel">
+			<!-- <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a> -->
+			<img id="sidebarPfp" src="placeholder-pfp.jpg" alt="user pfp" class="pfp">
+			<span id="sidebarUser" class="username"> Cato Sicarius </span>
+			<a class = "active" href="#home">Home</a>
+			<a href="#Profile">Profile</a>
+			<a href="#Messages">Messages</a>
+			<a href="#Find">Find Friends</a>
+		
+	</nav>
+	
+<!-- Main Feed containing posts and central column -->
+	<main id="main">
+		<div class="centerColumn" >
+			<h2 style="text-align: center;">Retriever Feed</h2>
+			
+			<!-- Post -->
+			<div class="post">
+			
+				<!-- Header for post -->
+				<div class = "post-header">
+					<img src="placeholder-pfp.jpg" alt="user pfp" class="pfp">
+					<span class="username"> Cato Sicarius </span>
+				</div>
+				
+				<!-- user selected media for post -->
+				<div class="post-media">
+					<img src="placeholder-post.jpg" alt ="posted content">
+				</div>
+				
+				<!-- post caption -->
+				<div class = "post-caption">
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+				</div>
+				
+				<!-- post actions -->
+				<div class = "post=actions">
+					<span class="fa-solid fa-thumbs-up"></span>
+					<span class="fa-solid fa-comment"></span>
+					<span class="fa-solid fa-share"> </span>
+				</div>
+				
+				<!--Post Comments -->
+				<div class="post-comments">
+					<p><strong>TestUser:</strong> This is a comment </p>
+					<p><strong>SugarSkull:</strong> This is another test comment </p>
+				</div>
+			</div>	
+				
+				<!-- SECOND TEST POST -->
+				<!-- Post -->
+			<div class="post">
+			
+				<!-- Header for post -->
+				<div class = "post-header">
+					<img src="placeholder-pfp2.jpg" alt="user pfp" class="pfp">
+					<span class="username"> Meowsketeer </span>
+				</div>
+				
+				<!-- user selected media for post -->
+				<div class="post-media">
+					<video controls width="100%">
+						<source src="placeholder-post2-1.mp4" type ="video/mp4" alt ="posted content">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				
+				<!-- post caption -->
+				<div class = "post-caption">
+					<p>Yall look where I was at this weekend!</p>
+				</div>
+				
+				<!-- post actions -->
+				<div class = "post=actions">
+					<span class="fa-solid fa-thumbs-up"></span>
+					<span class="fa-solid fa-comment"></span>
+					<span class="fa-solid fa-share"> </span>
+				</div>
+				
+				<!--Post Comments -->
+				<div class="post-comments">
+					<p><strong>TestUser32:</strong> Woah so coollllll </p>
+					<p><strong>SugarSkull:</strong> Chat is this AI? </p>
+				</div>
+			</div>	
+		</div>
+
+	</main>
+
+
+</body>
+</html>
+

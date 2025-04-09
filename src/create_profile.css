@@ -1,5 +1,7 @@
+/* Ashley Rabino */
+
 html {
-    background-color: #fdb515;
+    background-color: #636466;
     font-family: "Inter", sans-serif;
 }   
 
@@ -15,9 +17,10 @@ h1 {
 
 button {
     font-family: "Inter", sans-serif;
-    width: 260px;
+    width: 255px;
     height: 30px;
     margin-top: 20px;
+    margin-left: 5px;
     background-color: #fdb515;
     border: 0.5px;
     border-radius: 5px;
