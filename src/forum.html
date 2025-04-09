@@ -13,7 +13,7 @@
     <p>Welcome to the Forum! This page allows you to answer a question of the day. The question will be different each time you refresh the page.</p>
     <ul>
         <li><a href="/src/main.html">Home</a></li>
-        <li><a href="#Profile">Profile</a></li>
+        <li><a href="#profile">Profile</a></li>
         <li><a href="/src/messages.html">Messages</a></li>
     </ul>
 
@@ -21,23 +21,23 @@
 
     <h2>QOTD: 
    
-   <?php
-        // Array of questions
-        $questions = [
-            "What made you smile today?",
-            "What is your favorite hobby?",
-            "What's a new skill you'd like to learn?",
-            "What was your favorite part of the week?",
-            "If you could travel anywhere right now, where would you go?",
-            "If you had a wish right now, what would you wish for?"
-        ];
+        <?php
+            // Array of questions
+            $questions = [
+                "What made you smile today?",
+                "What is your favorite hobby?",
+                "What's a new skill you'd like to learn?",
+                "What was your favorite part of the week?",
+                "If you could travel anywhere right now, where would you go?",
+                "If you had a wish right now, what would you wish for?"
+            ];
 
-        // Select a random question from the array
-        $randomIndex = array_rand($questions);
-        $questionOfDay = $questions[$randomIndex];
+            // Select a random question from the array
+            $randomIndex = array_rand($questions);
+            $questionOfDay = $questions[$randomIndex];
 
-        // Display the random question
-        echo $questionOfDay;
+            // Display the random question
+            echo $questionOfDay;
         ?>
 
     </h2>
@@ -58,3 +58,4 @@
 
 </body>
 </html>
+

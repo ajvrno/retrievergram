@@ -2,9 +2,11 @@
 
 /* STYLES FOR MAIN FEED */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 body{
 	background-color: #ffc72c;
-
+	font-family: "Inter", sans-serif;
 }
 
 header {
@@ -13,6 +15,12 @@ header {
 	text-align: center;
 	margin: 0;
 }
+
+.logo {
+	width: auto;
+	height: 75px;
+}
+
 /*sidepanel*/
 .sidepanel {
 	
@@ -66,6 +74,7 @@ header {
 	background-color: #111;
 	color: white;
 	border: none;
+	border-radius: 30px;
 	cursor: pointer;
 	transition: left 0.3s ease;
 	z-index: 1001; /*always on top*/
