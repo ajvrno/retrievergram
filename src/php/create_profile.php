@@ -1,3 +1,10 @@
+<?php
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['pass'] ?? '';
+    $phone = $_POST['phone'] ?? '';
+    $username = $_POST['user'] ?? '';
+?>
+
 <!--Ashley Rabino-->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +22,12 @@
     <div class="create">
         <h1>Create Profile</h1>
 
-        <form id="form" action="/src/confirmation.html" method="get">
+        <form id="form" action="confirmation.php" method="POST">
+            <!-- Hidden inputs to keep login info -->
+            <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">
+            <input type="hidden" name="pass" value="<?php echo htmlspecialchars($password); ?>">
+            <input type="hidden" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
+            <input type="hidden" name="user" value="<?php echo htmlspecialchars($username); ?>">
 
             <label for="fname">First Name</label><br>
             <input type="text" name="fname" required><br>
