@@ -1,0 +1,254 @@
+/* STYLES FOR MAIN FEED */
+
+
+body{
+
+	background-color: #ffc72c;
+
+}
+
+header {
+	background-color: #ffc72c;
+	padding: 20px;
+	text-align: center;
+	margin: 0;
+	background-image: url("yellowflagbackground.jpg");
+
+}
+header h1{
+		
+	font-family: 'Brush Script MT', cursive;
+	font-size: 50px;
+}
+.logo {
+	width: 15%;
+	height: 15%
+	display: block;
+	margin: 0 auto;
+	border-radius: 8px;
+}
+/*sidepanel*/
+.sidepanel {
+	
+	border: 5px inset black;
+	height: 100%;
+	width: 0; /*changed through JS*/
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	/*background-color: #fdb515;*/
+    background-image: linear-gradient(to right, rgba(218,33,44,0.2) , #fdb515); /* umbc red --> umbc yellow faint gradient*/
+	overflow-x: hidden; /*disable horizontal scroll*/
+	padding-top: 60px;
+	transition: width 0.3s ease; /*sidepanel transition iin 0.5s*/
+
+}
+.
+/*horizontal lines under links */
+.sidepanel hr{
+	
+	width: 80%;
+	margin:  10px auto;
+	border: none;
+	border-top: 1px solid #444;
+	box-sizing: content-box;
+}
+/*all sidebar links */
+.sidepanel a{
+
+	display: block;
+	color: black;
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	transition: 0.3s;
+}
+/* Specifically for the link inside the sidebar with class active*/
+#mySidepanel a:hover {
+
+	color: #f1f1f1;
+
+}
+
+#sidebarUser{
+
+	display: block;
+	color: black;
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	transition: 0.3s;
+	
+}
+
+#sidebarPfp{
+	display:inline-block;
+}
+.togglebtn{
+
+	position: fixed;
+	top: 20px;
+	left: 0;
+	font-size: 20px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	transition: left 0.3s ease;
+	z-index: 1001; /*always on top*/
+	border-radius: 0px 5px 5px 0px;
+}
+
+/*right column styling*/
+.bulletin-board{
+	
+	position:fixed;
+	top: 0;
+	right: 0;
+	width: 14%;
+	height: 50%;
+	background-color: #c7c8ca;
+	padding: 15px;
+	box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+	overflow-y: auto;
+	transition: transform 0.3s ease-in-out;
+	transform: translateX(0); /*shown by default*/
+}
+.bulletinList a{
+	
+	display: block;
+	color: black;
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	transition: 0.3s;
+}
+.bulletinList a:hover{
+	
+	color: #f1f1f1;
+}
+.bulletin-board.hidden {
+
+	transform: translateX(100%);
+}
+.toggle-bulletin{
+	
+	position: fixed;
+	top: 20px;
+	right: 16%;
+	font-size: 20px;
+	transition:transform 1s ease-in-out;
+	transform: translateX(20%);
+	z-index: 1000;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 5px 0 0 5px;
+}
+.toggle-bulletin.hidden{
+
+	right: 0%;
+	transition: transform 0.3s ease-in-out;
+}
+
+#main {
+	transition: margin-left 1s ease;
+	margin-left: 0;
+	background-image: url("grayflagbackground.jpg");
+	/*background-color: #c7c8ca;*/
+}
+
+/*MAIN POSTS*/
+
+.centerColumn{
+
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	
+}
+
+.post {
+
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 15px;
+	margin-bottom: 30px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.post-header {
+
+	display: flex;
+	align-items: center; /* makes all items inside this div centered */
+	margin-bottom: 10px;
+	
+}
+
+.pfp {
+
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right:10px;
+}
+
+.username {
+	
+	font-weight: bold;
+}
+
+.post-media img,
+.post-media video{
+
+	width: 100%
+	border-radius: 8px;
+	margin-bottom:10px;
+	
+}
+
+.post-caption {
+
+	margin-bottom: 10px;
+
+}
+
+.post-comments {
+
+	font-size: 14px;
+	colors: #555;
+	margin-top: 10px;
+	border-top: 1px solid #eee;
+	padding-top: 10px;
+	
+}
+/* Links on mouse-over (but not for class active) 
+.sidepanel .closebtn {
+
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	
+}
+
+
+.openbtn {
+
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #111;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	
+}
+*/
+
+

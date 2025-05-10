@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            body {
+                background-color: #fdb515;
+                margin: 0;
+                padding: 0;
+            }
+
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                max-width: 300px;
+                margin: auto;
+                text-align: center;
+                font-family: arial;
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .title {
+                color: black;
+            }
+
+            button {
+                border: none;
+                outline: 0;
+                display: inline-block;
+                padding: 8px;
+                color: white;
+                background-color: #000;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+                font-size: 18px;
+                border-radius: 5px;
+            }
+            
+
+            a {
+                text-decoration: none;
+                font-size: 22px;
+                color: black;
+            }
+
+            button:hover, a:hover {
+                opacity: 0.7;
+            }
+
+            input[type="text"], input[type="file"] {
+                width: 50%;
+                padding: 10px;
+                margin: 10px 0;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+
+            #editForm {
+                display: none;
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+
+<h2 style="text-align: center">Profile Card</h2>
+
+<div class="card" id="profileCard">
+    <img id="profilePic" src="profile_pic.jpg" alt="Default" style="width:100%">
+    <h1 id="userName">John Doe</h1>
+    <p class="title" id="Major">Information Systems</p>
+    <p id="bio">Hi</p>
+    <button id="edit" onclick="editProfile()">Edit</button>
+</div>
+
+<!-- Profile Edit Form (hidden by default) -->
+<div id="editForm">
+    <h3>Edit Profile</h3>
+    <input type="file" id="newProfilePic" onchange="previewImage()" />
+    <input type="text" id="newUserName" placeholder="Enter your name" />
+    <input type="text" id="newMajor" placeholder="Enter your major" />
+    <input type="text" id="newBio" placeholder="Enter your bio" />
+    <button onclick="saveProfile()">Save</button>
+</div>
+
+<script>
+    function editProfile() {
+        // Hide the profile card and show the edit form
+        document.getElementById("profileCard").style.display = "none";
+        document.getElementById("editForm").style.display = "block";
+
+        // Populate the form with current values
+        document.getElementById("newUserName").value = document.getElementById("userName").innerText;
+        document.getElementById("newMajor").value = document.getElementById("Major").innerText;
+        document.getElementById("newBio").value = document.getElementById("bio").innerText;
+    }
+
+    function previewImage() {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById("profilePic").src = e.target.result;
+        }
+        reader.readAsDataURL(document.getElementById("newProfilePic").files[0]);
+    }
+
+    function saveProfile() {
+        // Get the updated values from the form
+        var newName = document.getElementById("newUserName").value;
+        var newMajor = document.getElementById("newMajor").value;
+        var newBio = document.getElementById("newBio").value;
+
+        // Update the profile card with the new values
+        document.getElementById("userName").innerText = newName;
+        document.getElementById("Major").innerText = newMajor;
+        document.getElementById("bio").innerText = newBio;
+
+        // Hide the edit form and show the updated profile
+        document.getElementById("editForm").style.display = "none";
+        document.getElementById("profileCard").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
+

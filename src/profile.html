@@ -1,0 +1,70 @@
+<!--profile_page.html
+Aaki Roka 
+Users can customize their profile -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="profile.css">
+      
+    <script>
+      
+      document.getElementById("editForm").style.display = "none";
+    
+      function editProfile() {
+          document.getElementById("profileCard").style.display = "none";
+          document.getElementById("editForm").style.display = "block";
+    
+          document.getElementById("newUserName").value = document.getElementById("userName").innerText;
+          document.getElementById("newMajor").value = document.getElementById("Major").innerText;
+          document.getElementById("newBio").value = document.getElementById("bio").innerText;
+          
+      }
+    
+      function previewImage(){
+          var reader = new FileReader(); 
+          reader.onload = function(e) {
+              document.getElementById("profilePic").src = e.target.result;
+          }
+          reader.readAsDataURL(document.getElementById("newProfilePic").files[0]);
+      }
+      function saveProfile(){
+          var newName = document.getElementById("newUserName").value;
+          var newMajor = document.getElementById("newMajor").value;
+          var newBio = document.getElementById("newBio").value;
+    
+          document.getElementById("userName").innerText = newName;
+          document.getElementById("Major").innerText = newMajor;
+          document.getElementById("bio").innerText = newBio;
+    
+    
+          document.getElementById("editForm").style.display = "none";
+          document.getElementById("profileCard").style.display = "block"
+      }
+    </script>
+</head>
+
+<body>
+
+ <div class = "card" id="profileCard">
+    <img id= "profilePic" src= "img/profile_pic.jpg" alt = "Default" style = "width :100%">
+    <h1 id = "userName" > John Doe</h1>
+    <p class = "title" id= "Major">Information Systems  </p>
+    <p id = "bio" > Hi! </p>
+ <p><button id = "edit" onclick = "editProfile()" > Edit</button></p>
+ </div>
+
+ <div id = "editForm">
+    <h3> Edit Profile </h3>
+    <br>
+    <input type = "file" id ="newProfilePic" onchange="previewImage()"/>
+    <br>
+    <input type = "text" id = "newUserName" placeholder="Enter your name "/>
+    <br>
+    <input type = "text" id = "newMajor" placeholder="Enter your major "/>
+    <br>
+    <input type = "text" id = "newBio" placeholder="Add your bio "/>
+    <button onclick = "saveProfile()" > Save </button>
+ </div>
+</body>
+</html> 

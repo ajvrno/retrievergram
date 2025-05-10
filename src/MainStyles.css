@@ -1,12 +1,12 @@
-/* Wayne Major */
+/*	Author: Wayne Major
+		date: 4/9/2025
+		IS 448 - Professor Oni */
 
 /* STYLES FOR MAIN FEED */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 body{
+  font-family: "Inter", sans-serif;
 	background-color: #ffc72c;
-	font-family: "Inter", sans-serif;
+
 }
 
 header {
@@ -14,27 +14,44 @@ header {
 	padding: 20px;
 	text-align: center;
 	margin: 0;
-}
+	background-image: url("yellowflagbackground.jpg");
 
+}
+header h1{
+	font-family: 'Brush Script MT', cursive;
+	font-size: 50px;
+}
 .logo {
-	width: auto;
-	height: 75px;
+	width: 15%;
+	height: 15%
+	display: block;
+	margin: 0 auto;
+	border-radius: 8px;
 }
-
 /*sidepanel*/
 .sidepanel {
-	
 	height: 100%;
 	width: 0; /*changed through JS*/
 	position: fixed;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #ffc72c;
+	/*background-color: #fdb515;*/
+	background-image: linear-gradient(to right, rgba(218,33,44,0.2) , #fdb515); /* umbc red --> umbc yellow faint gradient*/
 	overflow-x: hidden; /*disable horizontal scroll*/
 	padding-top: 60px;
 	transition: width 0.3s ease; /*sidepanel transition iin 0.5s*/
 
+}
+.
+/*horizontal lines under links */
+.sidepanel hr{
+	
+	width: 80%;
+	margin:  10px auto;
+	border: none;
+	border-top: 1px solid #444;
+	box-sizing: content-box;
 }
 /*all sidebar links */
 .sidepanel a{
@@ -64,26 +81,84 @@ header {
 	
 }
 
+#sidebarPfp{
+	display:inline-block;
+}
 .togglebtn{
 
 	position: fixed;
 	top: 20px;
 	left: 0;
-	padding: 10px 15px;
 	font-size: 20px;
-	background-color: #111;
-	color: white;
+	background-color: #333;
+	color: #fff;
 	border: none;
-	border-radius: 30px;
+	padding: 10px;
 	cursor: pointer;
 	transition: left 0.3s ease;
 	z-index: 1001; /*always on top*/
+	border-radius: 0px 5px 5px 0px;
+}
+
+/*right column styling*/
+.bulletin-board{
+
+	position:fixed;
+	top: 0;
+	right: 0;
+	width: 14%;
+	height: 100%;
+	background-color: #c7c8ca;
+	padding: 15px;
+	box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+	overflow-y: auto;
+	transition: transform 0.3s ease-in-out;
+	transform: translateX(0); /*shown by default*/
+}
+.bulletinList a{
+	
+	display: block;
+	color: black;
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	transition: 0.3s;
+}
+.bulletinList a:hover{
+	
+	color: #f1f1f1;
+}
+.bulletin-board.hidden {
+
+	transform: translateX(100%);
+}
+.toggle-bulletin{
+	
+	position: fixed;
+	top: 20px;
+	right: 16%;
+	font-size: 20px;
+	transition:transform 1s ease-in-out;
+	transform: translateX(20%);
+	z-index: 1000;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 5px 0 0 5px;
+}
+.toggle-bulletin.hidden{
+
+	right: 0%;
+	transition: transform 0.3s ease-in-out;
 }
 
 #main {
-	transition: margin-left 0.3s ease;
+	transition: margin-left 1s ease;
 	margin-left: 0;
-	background-color: #c7c8ca;
+	background-image: url("grayflagbackground.jpg");
+	/*background-color: #c7c8ca;*/
 }
 
 /*MAIN POSTS*/
@@ -130,9 +205,9 @@ header {
 .post-media img,
 .post-media video{
 
-	width: 100%;
+	width: 100%
 	border-radius: 8px;
-	margin-bottom: 10px;
+	margin-bottom:10px;
 	
 }
 
@@ -145,7 +220,7 @@ header {
 .post-comments {
 
 	font-size: 14px;
-	color: #555;
+	colors: #555;
 	margin-top: 10px;
 	border-top: 1px solid #eee;
 	padding-top: 10px;
