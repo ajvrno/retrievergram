@@ -36,7 +36,7 @@
 
             header("Location: MainFeed.html");
             exit();
-
+            
         } else {
             $message = "Error updating profile: " . mysqli_error($conn);
         }
@@ -51,7 +51,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
-    <link rel="stylesheet" href="src/create_profile.css">
+    <link rel="stylesheet" href="create_profile.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@300..700&display=swap');
     </style>
@@ -62,7 +62,7 @@
     <div class="create">
         <h1>Create Profile</h1>
 
-        <form id="form" action="confirmation.html" method="get">
+        <form id="form" action="src/create_profile.php" method="post">
 
             <label for="fname">First Name</label><br>
             <input type="text" name="fname" required><br>

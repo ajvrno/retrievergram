@@ -61,7 +61,7 @@
 	<div class="register">
 	    <h1>Log In</h1>
 
-		<form id="form" action="log_in.php" method="get">
+		<form id="form" action="log_in.php" method="post">
 			<label for="username">Username</label><br>
             <input type="text" name="username" required><br>
             <label for="pass">Password</label><br>
