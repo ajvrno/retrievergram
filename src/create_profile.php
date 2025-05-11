@@ -16,11 +16,12 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $first_name = $_POST['fname'];
-        $last_name = $_POST['lname'];
-        $major = $_POST['major'];
-        $grad_date = $_POST['grad'];
-        $pronouns = $_POST['pronouns'];
+        $first_name = htmlspecialchars($_POST['fname']);
+        $last_name = htmlspecialchars($_POST['lname']);
+        $major = htmlspecialchars($_POST['major']);
+        $grad_date = htmlspecialchars($_POST['grad']);
+        $pronouns = htmlspecialchars($_POST['pronouns']);
+
 
         // Get the user ID from the session
         $user_id = $_SESSION['user_id'];

@@ -10,11 +10,12 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $user = $_POST['user'];
-        $pass = $_POST['pass'];
+        $email = htmlspecialchars($_POST['email']);
+        $phone = htmlspecialchars($_POST['phone']);
+        $user = htmlspecialchars($_POST['user']);
+        $pass = htmlspecialchars($_POST['pass']);
         $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
+
 
         // Check if username or email already exists
         $stmt = mysqli_prepare($db, "SELECT user_id FROM USERS WHERE username = ? OR email = ?");

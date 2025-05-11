@@ -10,8 +10,8 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $user = $_POST['username'];
-        $pass = $_POST['pass'];
+        $user = htmlspecialchars($_POST['username']);
+        $pass = htmlspecialchars($_POST['pass']);
 
         // Retrieve user using prepared statement
         $stmt = mysqli_prepare($db, "SELECT user_id, username, password FROM USERS WHERE username = ?");
@@ -29,6 +29,7 @@
                 $_SESSION['user_id'] = $user_id;
                 $_SESSION['username'] = $username;
 
+			
                 header("Location: src/MainFeed.html");
 
                 exit();
