@@ -1,6 +1,4 @@
-Author: Vivian Tran
-
-
+<!--Author: Vivian Tran-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,7 +97,7 @@ Author: Vivian Tran
 
 
     <footer>
-        <p>© 2025 RetrieverGram. All rights reserved.</p>
+        <p>ï¿½ 2025 RetrieverGram. All rights reserved.</p>
     </footer>
 </body>
 </html>
